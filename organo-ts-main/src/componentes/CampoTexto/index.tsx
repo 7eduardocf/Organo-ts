@@ -1,10 +1,19 @@
 import './CampoTexto.css'
+import React from "react"
 
-const CampoTexto = (props) => {
+interface CampoDeTextoProps{
+    aoAlterado: (valor: string)=>void,
+    placeholder: string,
+    label: string,
+    valor: string,
+    obrigatorio: boolean
+}
+
+const CampoTexto = (props: CampoDeTextoProps) => {
 
     const placeholderModificada = `${props.placeholder}...` 
 
-    const aoDigitado = (evento) => {
+    const aoDigitado = (evento: React.ChangeEvent<HTMLInputElement>) => {
         props.aoAlterado(evento.target.value)
     }
 
