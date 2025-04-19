@@ -1,5 +1,4 @@
 import './CampoTexto.css'
-import React from "react"
 
 interface CampoDeTextoProps{
     aoAlterado: (valor: string)=>void,
